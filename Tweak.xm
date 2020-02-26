@@ -227,8 +227,8 @@ static void loadPrefs() {
   NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:@"/var/mobile/Library/Preferences/me.conorthedev.shylabels.plist"];
 
   if (prefs) {
-    enabled = ( [prefs objectForKey:@"enabled"] ? [[prefs objectForKey:@"enabled"] boolValue] : YES );
-    delay = ( [prefs objectForKey:@"delay"] ? [[prefs objectForKey:@"delay"] doubleValue] : 1.0 );
+    enabled = [[prefs objectForKey:@"enabled"] boolValue];
+    delay = [[prefs objectForKey:@"delay"] doubleValue];
   }
 
 }
